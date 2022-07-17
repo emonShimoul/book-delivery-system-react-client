@@ -5,6 +5,8 @@ import MyPurchase from './components/MyPurchase/MyPurchase';
 import AllPurchase from './components/AllPurchase/AllPurchase';
 import AllBooks from './components/AllBooks/AllBooks';
 import Home from './components/Home/Home';
+import Login from './components/Login/Login';
+import LogOut from './components/LogOut/LogOut';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path='/mypurchase' element={<MyPurchase />} />
           <Route path='/allpurchase' element={<AllPurchase />} />
           <Route path='/allbooks' element={<AllBooks />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/logout' element={<LogOut />} />
         </Routes>
       </BrowserRouter>
     </div>
