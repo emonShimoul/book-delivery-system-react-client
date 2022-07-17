@@ -22,7 +22,7 @@ const Header = () => {
                     <Form className="d-flex">
                         <Link to="/login"><Button variant="outline-success">Login</Button></Link>
                         <Link to="/register"><Button className='mx-4' variant="success">Register</Button></Link>
-                        <Link to="/login"><Button variant="secondary">Log Out</Button></Link>
+                        <Link to="/logout"><Button variant="secondary">Log Out</Button></Link>
                     </Form>
                     </Navbar.Collapse>
                 </Container>

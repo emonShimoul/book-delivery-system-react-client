@@ -7,6 +7,7 @@ import AllBooks from './components/AllBooks/AllBooks';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import LogOut from './components/LogOut/LogOut';
+import Register from './components/Register/Register';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/allpurchase' element={<AllPurchase />} />
           <Route path='/allbooks' element={<AllBooks />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
           <Route path='/logout' element={<LogOut />} />
         </Routes>
       </BrowserRouter>
