@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Container, Form, Nav, Navbar } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -14,9 +15,9 @@ const Header = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">All Books</Nav.Link>
-                        <Nav.Link href="#action2">My Purchase</Nav.Link>
-                        <Nav.Link href="#action3">All Purchase</Nav.Link>
+                        <NavLink className='text-decoration-none text-dark px-3' to="/allbooks">All Books</NavLink>
+                        <NavLink className='text-decoration-none text-dark px-3' to="/mypurchase">My Purchase</NavLink>
+                        <NavLink className='text-decoration-none text-dark px-3' to="/allpurchase">All Purchase</NavLink>
                     </Nav>
                     <Form className="d-flex">
                         <Button variant="outline-success">Login</Button>

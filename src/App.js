@@ -8,12 +8,12 @@ import AllBooks from './components/AllBooks/AllBooks';
 function App() {
   return (
     <div className="App">
-      <Header></Header>
       <BrowserRouter>
+      <Header></Header>
         <Routes>
-          <Route path='mypurchase' element={<MyPurchase />} />
-          <Route path='allpurchase' element={<AllPurchase />} />
-          <Route path='allbooks' element={<AllBooks />} />
+          <Route path='/mypurchase' element={<MyPurchase />} />
+          <Route path='/allpurchase' element={<AllPurchase />} />
+          <Route path='/allbooks' element={<AllBooks />} />
         </Routes>
       </BrowserRouter>
     </div>
