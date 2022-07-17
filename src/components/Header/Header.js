@@ -7,7 +7,7 @@ const Header = () => {
         <div>
             <Navbar bg="light" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#">Book Delivery System</Navbar.Brand>
+                    <Navbar.Brand><Link className='text-decoration-none text-dark' to="/">Book Delivery System</Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                     <Nav
