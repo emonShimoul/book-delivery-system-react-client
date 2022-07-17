@@ -20,11 +20,11 @@ const Header = () => {
                         <NavLink className='text-decoration-none text-light px-3' to="/allpurchase">All Purchase</NavLink>
                     </Nav>
                     <Form className="d-flex">
-                        <Link to="/login"><Button variant="outline-success">Login</Button></Link>
+                        <Link to="/login"><Button variant="primary">Login</Button></Link>
                         <Link to="/register"><Button className='mx-4' variant="success">Register</Button></Link>
                         <Link to="/logout"><Button variant="secondary">Log Out</Button></Link>
                     </Form>
-                    </Navbar.Collapse>
+                    </Navbar.Collapse>z
                 </Container>
                 </Navbar>
         </div>
