@@ -19,12 +19,12 @@ const Login = () => {
             <Form className='w-50 mx-auto mt-5 text-start p-4 border rounded-3' onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label><h5>Email Address</h5></Form.Label>
-                <Form.Control {...register("firstName")} type="email" placeholder="Enter email" />
+                <Form.Control {...register("email")} type="email" placeholder="Enter Email" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label><h5>Password</h5></Form.Label>
-                <Form.Control {...register("password")} type="password" placeholder="Password" />
+                <Form.Control {...register("password")} type="password" placeholder="Enter Password" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 </Form.Group>
