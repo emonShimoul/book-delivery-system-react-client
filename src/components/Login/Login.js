@@ -3,13 +3,14 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import useFirebase from '../../hooks/useFirebase';
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
 
-    const {googleLogin} = useFirebase();
+    const {googleLogin} = useAuth();
 
     const handleGoogleLogin = () => {
         googleLogin()
