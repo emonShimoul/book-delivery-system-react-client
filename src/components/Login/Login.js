@@ -3,10 +3,20 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
+
+    const {googleLogin} = useFirebase();
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+        .then(result => {
+            console.log("Logged In...");
+        })
+    }
     
     return (
         // <form onSubmit={handleSubmit(onSubmit)}>
@@ -37,7 +47,7 @@ const Login = () => {
                 </div>
             </Form>
             <div className='mt-4'>
-                <Button className='me-3 px-5 py-2' variant="warning" type="submit">
+                <Button className='me-3 px-5 py-2' variant="warning" onClick={handleGoogleLogin}>
                     Login with Google
                 </Button>
                 <Button className='ms-3 px-5 py-2' variant="secondary" type="submit">
