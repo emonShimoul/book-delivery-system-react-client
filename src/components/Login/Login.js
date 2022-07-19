@@ -1,10 +1,8 @@
-import { type } from '@testing-library/user-event/dist/type';
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import useFirebase from '../../hooks/useFirebase';
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
@@ -15,7 +13,7 @@ const Login = () => {
     const handleGoogleLogin = () => {
         googleLogin()
         .then(result => {
-            console.log("Logged In...");
+            console.log("Logged In...", result);
         })
     }
     
