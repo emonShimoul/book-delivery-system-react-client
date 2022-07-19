@@ -1,8 +1,11 @@
 import React from 'react';
 import { Button, Container, Form, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
+    const {user} = useAuth();
+    console.log(user);
     return (
         <div>
             <Navbar className='py-3' bg="dark" expand="lg">
