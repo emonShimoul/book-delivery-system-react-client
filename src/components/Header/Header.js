@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
-    const {user} = useAuth();
+    const {user, logOut} = useAuth();
     console.log(user);
     return (
         <div>
@@ -32,7 +32,7 @@ const Header = () => {
                             :
                              <div>
                                  <span className='fw-bold text-light mt-2 ms-2 me-3'>{user.displayName}</span>
-                                <Link to="/logout"><Button variant="secondary">Log Out</Button></Link>
+                                <Link to="/logout"><Button variant="secondary" onClick={logOut}>Log Out</Button></Link>
                              </div>
                         }
                     </Form>

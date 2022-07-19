@@ -31,9 +31,17 @@ const useFirebase = () => {
         return () => unSubscribed;
     }, []);
 
+    const logOut = () => {
+        signOut(auth)
+        .then(() => {
+            console.log("Sign Out Successful");
+        })
+    }
+
     return {
         googleLogin,
-        user
+        user,
+        logOut
     }
 }
 
