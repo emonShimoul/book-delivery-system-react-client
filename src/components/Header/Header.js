@@ -25,6 +25,11 @@ const Header = () => {
                     <Form className="d-flex">
                         <Link to="/login"><Button variant="primary">Login</Button></Link>
                         <Link to="/register"><Button className='mx-4' variant="success">Register</Button></Link>
+                        {
+                            (user.email) ?
+                            <span className='fw-bold text-light mt-2 ms-2 me-3'>{user.displayName}</span> :
+                            <span></span>
+                        }
                         <Link to="/logout"><Button variant="secondary">Log Out</Button></Link>
                     </Form>
                     </Navbar.Collapse>z
