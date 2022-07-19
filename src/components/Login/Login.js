@@ -2,6 +2,7 @@ import { type } from '@testing-library/user-event/dist/type';
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
@@ -29,9 +30,10 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 </Form.Group>
                 <div className='text-center'>
-                <Button className='mt-3 px-5 py-2' variant="primary" type="submit">
+                <Button className='my-3 px-5 py-2' variant="primary" type="submit">
                 Login
                 </Button>
+                <p>Don't have an account? <Link to="/register" className='text-primary'>Create an account</Link></p>
                 </div>
             </Form>
             <div className='mt-4'>
