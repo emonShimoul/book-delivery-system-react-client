@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
     const {user, logOut} = useAuth();
-    console.log(user);
+    // console.log(user);
 
     const handleLogOut = () => {
         logOut();
@@ -40,7 +40,7 @@ const Header = () => {
                              </div>
                         }
                     </Form>
-                    </Navbar.Collapse>z
+                    </Navbar.Collapse>
                 </Container>
                 </Navbar>
         </div>
