@@ -8,22 +8,25 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import LogOut from './components/LogOut/LogOut';
 import Register from './components/Register/Register';
+import AuthProvider from './contexts/AuthProvider';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-      <Header></Header>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/mypurchase' element={<MyPurchase />} />
-          <Route path='/allpurchase' element={<AllPurchase />} />
-          <Route path='/allbooks' element={<AllBooks />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-          <Route path='/logout' element={<LogOut />} />
-        </Routes>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+        <Header></Header>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/mypurchase' element={<MyPurchase />} />
+            <Route path='/allpurchase' element={<AllPurchase />} />
+            <Route path='/allbooks' element={<AllBooks />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/logout' element={<LogOut />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
