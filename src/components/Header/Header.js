@@ -6,6 +6,10 @@ import useAuth from '../../hooks/useAuth';
 const Header = () => {
     const {user, logOut} = useAuth();
     console.log(user);
+
+    const handleLogOut = () => {
+        logOut();
+    }
     return (
         <div>
             <Navbar className='py-3' bg="dark" expand="lg">
@@ -32,7 +36,7 @@ const Header = () => {
                             :
                              <div>
                                  <span className='fw-bold text-light mt-2 ms-2 me-3'>{user.displayName}</span>
-                                <Link to="/logout"><Button variant="secondary" onClick={logOut}>Log Out</Button></Link>
+                                <Link to="/logout"><Button variant="secondary" onClick={handleLogOut}>Log Out</Button></Link>
                              </div>
                         }
                     </Form>
