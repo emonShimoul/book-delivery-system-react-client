@@ -9,6 +9,7 @@ const Header = () => {
     const navigate = useNavigate()
     const redirect_uri = location.state?.from || '/';
     // console.log(user);
+    console.log(!user.email);
 
     const handleLogOut = () => {
         logOut();
@@ -27,8 +28,15 @@ const Header = () => {
                         navbarScroll
                     >
                         <NavLink className='text-decoration-none text-light px-3' to="/allbooks">All Books</NavLink>
-                            <NavLink className='text-decoration-none text-light px-3' to="/mypurchase">My Purchase</NavLink>
-                            <NavLink className='text-decoration-none text-light px-3' to="/allpurchase">All Purchase</NavLink>
+                        {
+                            (user.email) ?
+                            <div>
+                                <NavLink className='text-decoration-none text-light px-3' to="/mypurchase">My Purchase</NavLink>
+                                <NavLink className='text-decoration-none text-light px-3' to="/allpurchase">All Purchase</NavLink>
+                            </div>
+                            :
+                            <div></div>
+                        }
                     </Nav>
                     <Form className="d-flex">
                         {
