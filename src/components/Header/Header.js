@@ -7,12 +7,13 @@ const Header = () => {
     const {user, logOut} = useAuth();
     const location = useLocation();
     const navigate = useNavigate()
-    const redirect_uri = location.state?.from || '/';
+    const redirect_uri = location.state?.from || '/login';
     // console.log(user);
     console.log(!user.email);
 
     const handleLogOut = () => {
         logOut();
+        navigate(redirect_uri)
     }
 
     return (
