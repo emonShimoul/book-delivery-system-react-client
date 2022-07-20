@@ -14,7 +14,6 @@ const Header = () => {
         logOut();
     }
 
-    let afterUserLogin;
     return (
         <div>
             <Navbar className='py-3' bg="dark" expand="lg">
@@ -28,10 +27,8 @@ const Header = () => {
                         navbarScroll
                     >
                         <NavLink className='text-decoration-none text-light px-3' to="/allbooks">All Books</NavLink>
-                        <div style={afterUserLogin}>
                             <NavLink className='text-decoration-none text-light px-3' to="/mypurchase">My Purchase</NavLink>
                             <NavLink className='text-decoration-none text-light px-3' to="/allpurchase">All Purchase</NavLink>
-                        </div>
                     </Nav>
                     <Form className="d-flex">
                         {
