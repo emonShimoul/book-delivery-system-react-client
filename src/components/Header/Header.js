@@ -29,6 +29,7 @@ const Header = () => {
                         navbarScroll
                     >
                         <NavLink className='text-decoration-none text-light px-3' to="/allbooks">All Books</NavLink>
+                        <NavLink className='text-decoration-none text-light px-3' to="/addnewbook">Add New Book</NavLink>
                         {
                             (user.email) ?
                             <div>
