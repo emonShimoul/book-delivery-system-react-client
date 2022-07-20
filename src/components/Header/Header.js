@@ -1,15 +1,20 @@
 import React from 'react';
 import { Button, Container, Form, Nav, Navbar } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
     const {user, logOut} = useAuth();
+    const location = useLocation();
+    const navigate = useNavigate()
+    const redirect_uri = location.state?.from || '/';
     // console.log(user);
 
     const handleLogOut = () => {
         logOut();
     }
+
+    let afterUserLogin;
     return (
         <div>
             <Navbar className='py-3' bg="dark" expand="lg">
@@ -23,8 +28,10 @@ const Header = () => {
                         navbarScroll
                     >
                         <NavLink className='text-decoration-none text-light px-3' to="/allbooks">All Books</NavLink>
-                        <NavLink className='text-decoration-none text-light px-3' to="/mypurchase">My Purchase</NavLink>
-                        <NavLink className='text-decoration-none text-light px-3' to="/allpurchase">All Purchase</NavLink>
+                        <div style={afterUserLogin}>
+                            <NavLink className='text-decoration-none text-light px-3' to="/mypurchase">My Purchase</NavLink>
+                            <NavLink className='text-decoration-none text-light px-3' to="/allpurchase">All Purchase</NavLink>
+                        </div>
                     </Nav>
                     <Form className="d-flex">
                         {
