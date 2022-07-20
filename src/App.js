@@ -9,6 +9,7 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import AuthProvider from './contexts/AuthProvider';
 import AddNewBook from './components/AddNewBook/AddNewBook';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
             <Route path='/mypurchase' element={<MyPurchase />} />
             <Route path='/allpurchase' element={<AllPurchase />} />
             <Route path='/allbooks' element={<AllBooks />} />
-            <Route path='/addnewbook' element={<AddNewBook />} />
+            <Route path='/addnewbook' element={<PrivateRoute><AddNewBook /></PrivateRoute>} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
           </Routes>
