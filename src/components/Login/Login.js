@@ -1,12 +1,15 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const redirect_uri = location.state?.from || '/mypurchase';
 
     const {googleLogin} = useAuth();
 
@@ -14,6 +17,7 @@ const Login = () => {
         googleLogin()
         .then(result => {
             console.log("Logged In...", result);
+            navigate(redirect_uri);
         })
     }
     
