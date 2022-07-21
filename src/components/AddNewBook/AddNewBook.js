@@ -12,17 +12,17 @@ const AddNewBook = () => {
             <Form className='w-50 mx-auto mt-5 text-start p-4 border rounded-3' onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group className="mb-3" controlId="formBasicBookName">
                 <Form.Label><h5>Book Name</h5></Form.Label>
-                <Form.Control {...register("bookName")} type="text" placeholder="Enter Book Name" />
+                <Form.Control {...register("bookName")} type="text" placeholder="Enter Book Name" required/>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicWriterName">
                 <Form.Label><h5>Writer Name</h5></Form.Label>
-                <Form.Control {...register("writerName")} type="text" placeholder="Enter Writer Name" />
+                <Form.Control {...register("writerName")} type="text" placeholder="Enter Writer Name" required/>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicBookPrice">
                 <Form.Label><h5>Price</h5></Form.Label>
-                <Form.Control {...register("bookPrice")} type="number" placeholder="Enter Price" />
+                <Form.Control {...register("bookPrice")} type="number" placeholder="Enter Price" required/>
                 </Form.Group>
 
                 <div className='text-center'>
