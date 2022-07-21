@@ -22,13 +22,6 @@ const Login = () => {
     }
     
     return (
-        // <form onSubmit={handleSubmit(onSubmit)}>
-        // <input {...register("firstName")} type="text" />
-        // <input {...register("email")} type="email" />
-        // <input type="number" {...register("age", { min: 18, max: 99 })} />
-        // <input type="submit" />
-        // </form>
-
         <div>
             <Form className='w-50 mx-auto mt-5 text-start p-4 border rounded-3' onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -40,7 +33,7 @@ const Login = () => {
                 <Form.Label><h5>Password</h5></Form.Label>
                 <Form.Control {...register("password")} type="password" placeholder="Enter Password" />
                 </Form.Group>
-                
+
                 <div className='text-center'>
                 <Button className='my-3 px-5 py-2' variant="primary" type="submit">
                 Login
