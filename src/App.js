@@ -10,6 +10,7 @@ import Register from './components/Register/Register';
 import AuthProvider from './contexts/AuthProvider';
 import AddNewBook from './components/AddNewBook/AddNewBook';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path='/addnewbook' element={<PrivateRoute><AddNewBook /></PrivateRoute>} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+            <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </BrowserRouter>
       </AuthProvider>
