@@ -9,7 +9,6 @@ const Header = () => {
     const navigate = useNavigate()
     const redirect_uri = location.state?.from || '/login';
     // console.log(user);
-    console.log(!user.email);
 
     const handleLogOut = () => {
         logOut();
