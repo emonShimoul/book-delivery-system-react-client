@@ -31,11 +31,9 @@ const Register = () => {
                 <Form.Control {...register("contactNumber")} type="number" placeholder="Enter Your Phone Number" />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                </Form.Group>
                 <div className='text-center'>
                 <Button className='my-3 px-5 py-2' variant="primary" type="submit">
-                Login
+                Register
                 </Button>
                 <p>Don't have an account? <Link to="/register" className='text-primary'>Create an account</Link></p>
                 </div>
