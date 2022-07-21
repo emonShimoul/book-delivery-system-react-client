@@ -35,7 +35,7 @@ const Register = () => {
                 <Button className='my-3 px-5 py-2' variant="primary" type="submit">
                 Register
                 </Button>
-                <p>Don't have an account? <Link to="/register" className='text-primary'>Create an account</Link></p>
+                <p>Already have an account? <Link to="/login" className='text-primary'>Login</Link></p>
                 </div>
             </Form>
         </div>
