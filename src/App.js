@@ -19,8 +19,8 @@ function App() {
         <Header></Header>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/mypurchase' element={<MyPurchase />} />
-            <Route path='/allpurchase' element={<AllPurchase />} />
+            <Route path='/mypurchase' element={<PrivateRoute><MyPurchase /></PrivateRoute>} />
+            <Route path='/allpurchase' element={<PrivateRoute><AllPurchase /></PrivateRoute>} />
             <Route path='/allbooks' element={<AllBooks />} />
             <Route path='/addnewbook' element={<PrivateRoute><AddNewBook /></PrivateRoute>} />
             <Route path='/login' element={<Login />} />
