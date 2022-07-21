@@ -40,8 +40,7 @@ const Login = () => {
                 <Form.Label><h5>Password</h5></Form.Label>
                 <Form.Control {...register("password")} type="password" placeholder="Enter Password" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                </Form.Group>
+                
                 <div className='text-center'>
                 <Button className='my-3 px-5 py-2' variant="primary" type="submit">
                 Login
