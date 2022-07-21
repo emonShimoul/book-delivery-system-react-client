@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
 
 
 const AddNewBook = () => {
@@ -18,7 +17,7 @@ const AddNewBook = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicWriterName">
                 <Form.Label><h5>Writer Name</h5></Form.Label>
-                <Form.Control {...register("bookName")} type="text" placeholder="Enter Writer Name" />
+                <Form.Control {...register("writerName")} type="text" placeholder="Enter Writer Name" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicBookPrice">
@@ -30,7 +29,6 @@ const AddNewBook = () => {
                 <Button className='my-3 px-5 py-2' variant="primary" type="submit">
                 Add Book
                 </Button>
-                <p>Don't have an account? <Link to="/register" className='text-primary'>Create an account</Link></p>
                 </div>
             </Form>
         </div>
