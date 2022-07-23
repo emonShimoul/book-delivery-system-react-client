@@ -21,7 +21,7 @@ const AddNewBook = () => {
         })
         .then(result => result.json())
         .then(data => {
-            console.log(data);
+            // console.log(data);
             if(data.insertedId){
                 alert("Book Added Successfully!!")    
                 navigate(redirect_uri);
