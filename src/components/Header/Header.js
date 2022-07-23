@@ -12,7 +12,7 @@ const Header = () => {
 
     const handleLogOut = () => {
         logOut();
-        navigate(redirect_uri)
+        navigate(redirect_uri);
     }
 
     return (
