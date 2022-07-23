@@ -13,6 +13,7 @@ const AllBooks = () => {
         .then(data => setAllBooks(data));
     }, []);
 
+    console.log(allBooks);
     return (
         <div className='my-5'>
             <div className="container">
