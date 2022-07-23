@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 const AddNewBook = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data =>{
-        console.log(data);
+        // console.log(data);
         fetch('http://localhost:5000/books', {
             method: 'POST',
             headers: {
@@ -14,14 +14,14 @@ const AddNewBook = () => {
             },
             body: JSON.stringify(data)
         })
-        // .then(result => result.json())
-        // .then(data => {
-        //     console.log(data);
-        //     if(data.insertedId){
-        //         alert("You have been registered successfully!!")    
-        //         // navigate(redirect_uri);
-        //     }
-        // })
+        .then(result => result.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                alert("Book Added Successfully!!")    
+                // navigate(redirect_uri);
+            }
+        })
     };
 
     return (
