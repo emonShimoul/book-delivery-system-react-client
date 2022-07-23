@@ -1,10 +1,15 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const AddNewBook = () => {
     const { register, handleSubmit } = useForm();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const redirect_uri = location.state?.from || '/mypurchase';
+
     const onSubmit = data =>{
         // console.log(data);
         fetch('http://localhost:5000/books', {
@@ -19,7 +24,7 @@ const AddNewBook = () => {
             console.log(data);
             if(data.insertedId){
                 alert("Book Added Successfully!!")    
-                // navigate(redirect_uri);
+                navigate(redirect_uri);
             }
         })
     };
