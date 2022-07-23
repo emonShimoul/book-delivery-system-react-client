@@ -8,7 +8,7 @@ const AddNewBook = () => {
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
     const location = useLocation();
-    const redirect_uri = location.state?.from || '/mypurchase';
+    const redirect_uri = location.state?.from || '/allbooks';
 
     const onSubmit = data =>{
         // console.log(data);
