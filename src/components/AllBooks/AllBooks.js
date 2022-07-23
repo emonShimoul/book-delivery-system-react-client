@@ -29,7 +29,7 @@ const AllBooks = () => {
                                             <h5 className="card-title">{book.bookName}</h5>
                                             <p>{book.writerName}</p>
                                             <p><small>Price: {book.bookPrice} TK</small></p>
-                                            <Link className='text-decoration-none text-white' to={`/purchaseBook/${book.eventTitle}`}><Button variant="warning mx-3">Purchase</Button></Link>
+                                            <Link className='text-decoration-none text-white' to={`/purchasebook/${book.bookName}`}><Button variant="warning mx-3">Purchase</Button></Link>
                                         </div>
                                     </div>
                                 </div>
