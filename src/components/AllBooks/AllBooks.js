@@ -13,11 +13,9 @@ const AllBooks = () => {
         .then(data => setAllBooks(data));
     }, []);
 
-    console.log(allBooks);
     return (
-        <div>
+        <div className='my-5'>
             <div className="container">
-                <h2>All Books</h2>
                 <div className="input-group mb-3 w-25 mx-auto mt-4">
                     <input type="text" className="form-control" placeholder="Search for Book" aria-label="Search for Event" aria-describedby="button-addon2" />
                     <button className="btn btn-primary" type="button" id="button-addon2">Search</button>
