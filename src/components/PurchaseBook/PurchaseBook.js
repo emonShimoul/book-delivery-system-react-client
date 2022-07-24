@@ -14,8 +14,6 @@ const PurchaseBook = () => {
     }
     return (
         <div className='container mt-4 mb-5'>
-            <h5>Hi, {user.displayName}</h5>
-            <p>Thank you for purchasing {bookname}, Price: {bookprice}</p>
             <div className="register-form rounded">
                 <h4 className='mb-4 fw-bold text-start'>Purchase Book</h4>
                 <form onSubmit={handleSubmit(onSubmit)}>
