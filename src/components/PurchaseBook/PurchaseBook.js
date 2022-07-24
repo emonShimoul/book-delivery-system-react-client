@@ -25,7 +25,6 @@ const PurchaseBook = () => {
                     <input {...register("bookprice")} type="text" value={bookprice} placeholder="Book Price" className='input-group input-field' required />
                     <input {...register("date")} type="date" className='input-group input-field' required />
                     <input {...register("description")} type="text" placeholder="Description" className='input-group input-field' />
-                    {/* <input {...register("event")} type="text" value={event} placeholder="Event Name" className='input-group input-field' required /> */}
                     <input type="submit" className='btn btn-primary mt-4 px-5' value="Registration" />
                 </form>
             </div>
