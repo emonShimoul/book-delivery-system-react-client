@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 import './PurchaseBook.css';
 
 const PurchaseBook = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const {user} = useAuth();
     const {bookname, bookprice} = useParams();
 
@@ -22,7 +22,8 @@ const PurchaseBook = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId){
-                alert("You have been registered successfully!!")    
+                alert("You have been registered successfully!!")
+                reset();
                 // navigate(redirect_uri);
             }
         })
