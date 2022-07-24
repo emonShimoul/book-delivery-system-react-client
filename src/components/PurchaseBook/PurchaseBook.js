@@ -11,6 +11,13 @@ const PurchaseBook = () => {
 
     const onSubmit = data => {
         console.log(data);
+        fetch('http://localhost:5000/purchasedBook', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
     }
     return (
         <div className='container my-5'>
