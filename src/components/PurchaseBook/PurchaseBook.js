@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 import './PurchaseBook.css';
 
 const PurchaseBook = () => {
-    const { register, handleSubmit, reset } = useForm();
+    const { register, handleSubmit } = useForm();
     const {user} = useAuth();
     const {bookname, bookprice} = useParams();
 
@@ -22,8 +22,8 @@ const PurchaseBook = () => {
                     <input {...register("bookname")} type="text" value={bookname} placeholder="Book Name" className='input-group input-field' required />
                     <input {...register("bookprice")} type="text" value={bookprice} placeholder="Book Price" className='input-group input-field' required />
                     <input {...register("date")} type="date" className='input-group input-field' required />
-                    <input {...register("phone")} type="number" placeholder="Phone Number" className='input-group input-field' />
-                    <input {...register("address")} type="text" placeholder="Delivery Address" className='input-group input-field' />
+                    <input {...register("phone")} type="number" placeholder="Phone Number" className='input-group input-field' required />
+                    <input {...register("address")} type="text" placeholder="Delivery Address" className='input-group input-field' required />
                     <input type="submit" className='btn btn-primary mt-4 px-5' value="Purchase" />
                 </form>
             </div>
