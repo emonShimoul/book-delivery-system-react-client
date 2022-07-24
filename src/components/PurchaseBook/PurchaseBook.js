@@ -13,7 +13,7 @@ const PurchaseBook = () => {
         console.log(data);
     }
     return (
-        <div className='container mt-4 mb-5'>
+        <div className='container my-5'>
             <div className="register-form rounded">
                 <h4 className='mb-4 fw-bold text-start'>Purchase Book</h4>
                 <form onSubmit={handleSubmit(onSubmit)}>
@@ -23,7 +23,7 @@ const PurchaseBook = () => {
                     <input {...register("bookprice")} type="text" value={bookprice} placeholder="Book Price" className='input-group input-field' required />
                     <input {...register("date")} type="date" className='input-group input-field' required />
                     <input {...register("description")} type="text" placeholder="Description" className='input-group input-field' />
-                    <input type="submit" className='btn btn-primary mt-4 px-5' value="Registration" />
+                    <input type="submit" className='btn btn-primary mt-4 px-5' value="Purchase" />
                 </form>
             </div>
         </div>
