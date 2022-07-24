@@ -11,12 +11,20 @@ const PurchaseBook = () => {
 
     const onSubmit = data => {
         console.log(data);
-        fetch('http://localhost:5000/purchasedBook', {
+        fetch('http://localhost:5000/purchasedBooks', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
+        })
+        .then(result => result.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                alert("You have been registered successfully!!")    
+                // navigate(redirect_uri);
+            }
         })
     }
     return (
