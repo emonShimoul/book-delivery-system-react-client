@@ -10,7 +10,6 @@ const PurchaseBook = () => {
     const {bookname, bookprice} = useParams();
 
     const onSubmit = data => {
-        console.log(data);
         fetch('http://localhost:5000/purchasedBooks', {
             method: 'POST',
             headers: {
@@ -20,9 +19,8 @@ const PurchaseBook = () => {
         })
         .then(result => result.json())
         .then(data => {
-            console.log(data);
             if(data.insertedId){
-                alert("You have been registered successfully!!")
+                alert("You have been purchased the book successfully!!")
                 reset();
                 // navigate(redirect_uri);
             }
