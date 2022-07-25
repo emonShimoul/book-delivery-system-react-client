@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 import DisplayPurchase from '../DisplayPurchase/DisplayPurchase';
+import './MyPurchase.css';
 
 const MyPurchase = () => {
     const[myPurchase, setMyPurchase] = useState([]);
@@ -19,7 +20,7 @@ const MyPurchase = () => {
  
     return (
         <div className="container">
-            <div className='events mt-5'>
+            <div className='mypurchase mt-5'>
                 {
                     myPurchase.map(purchase => <DisplayPurchase 
                     key = {purchase._id}
