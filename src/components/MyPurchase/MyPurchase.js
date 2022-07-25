@@ -17,9 +17,7 @@ const MyPurchase = () => {
     console.log(myPurchase);
  
     return (
-        <div>
-            <h2>My Purchase</h2>
-        </div>
+        myPurchase.map(mypurchase => <p>{mypurchase.bookname}</p>)
     );
 };
 
