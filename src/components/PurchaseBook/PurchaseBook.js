@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './PurchaseBook.css';
 
@@ -8,6 +8,9 @@ const PurchaseBook = () => {
     const { register, handleSubmit, reset } = useForm();
     const {user} = useAuth();
     const {bookname, bookprice} = useParams();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const redirect_uri = location.state?.from || '/mypurchase';
 
     const onSubmit = data => {
         fetch('http://localhost:5000/purchasedBooks', {
@@ -22,7 +25,7 @@ const PurchaseBook = () => {
             if(data.insertedId){
                 alert("You have been purchased the book successfully!!")
                 reset();
-                // navigate(redirect_uri);
+                navigate(redirect_uri);
             }
         })
     }
