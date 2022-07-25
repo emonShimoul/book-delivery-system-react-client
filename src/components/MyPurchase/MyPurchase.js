@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
+import DisplayPurchase from '../DisplayPurchase/DisplayPurchase';
 
 const MyPurchase = () => {
     const[myPurchase, setMyPurchase] = useState([]);
@@ -17,7 +18,18 @@ const MyPurchase = () => {
     console.log(myPurchase);
  
     return (
-        myPurchase.map(mypurchase => <p>{mypurchase.bookname}</p>)
+        <div className="container">
+            <div className='events mt-5'>
+                {
+                    myPurchase.map(purchase => <DisplayPurchase 
+                    key = {purchase._id}
+                    purchasedBookData = {purchase}
+                    // handleRemoveUserEvents = {handleRemoveUserEvents}
+                    >
+                    </DisplayPurchase> )
+                }
+            </div>
+        </div>
     );
 };
 
