@@ -15,7 +15,7 @@ const MyPurchase = () => {
         .then(data => setMyPurchase(data));
     }, []);
 
-    console.log(myPurchase);
+    // console.log(myPurchase);
  
     return (
         <div className="container">
