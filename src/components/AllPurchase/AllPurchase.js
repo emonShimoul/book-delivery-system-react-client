@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import useAuth from '../../hooks/useAuth';
 import DisplayPurchase from '../DisplayPurchase/DisplayPurchase';
 
 const AllPurchase = () => {
     const[allPurchase, setAllPurchase] = useState([]);
-    const {user} = useAuth();
 
     useEffect(() => {
         fetch(`http://localhost:5000/purchasedBooks`, {
