@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
+import DisplayPurchase from '../DisplayPurchase/DisplayPurchase';
 
 const AllPurchase = () => {
     const[allPurchase, setAllPurchase] = useState([]);
@@ -15,8 +16,17 @@ const AllPurchase = () => {
     }, []);
     console.log(allPurchase);
     return (
-        <div>
-            <h2>All Purchase</h2>
+        <div className="container">
+            <div className='mypurchase mt-5'>
+                {
+                    allPurchase.map(purchase => <DisplayPurchase 
+                    key = {purchase._id}
+                    purchasedBookData = {purchase}
+                    // handleRemoveUserEvents = {handleRemoveUserEvents}
+                    >
+                    </DisplayPurchase> )
+                }
+            </div>
         </div>
     );
 };
