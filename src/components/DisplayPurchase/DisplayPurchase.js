@@ -14,6 +14,7 @@ const DisplayPurchase = (props) => {
             <p>{email}</p>
             <p><small>{bookprice}</small></p>
             <button className='btn btn-warning'>Remove</button>
+            <button className='btn btn-dark'>Edit</button>
             {/* <button className='btn btn-warning' onClick={() => handleRemoveUserEvents(userData._id)}>Remove</button> */}
         </div>
     );
