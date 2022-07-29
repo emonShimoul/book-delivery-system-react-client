@@ -16,6 +16,10 @@ const MyPurchase = () => {
         .then(data => setMyPurchase(data));
     }, []);
 
+    const handleRemoveMyPurchase = id => {
+        console.log(id);
+    }
+
     // console.log(myPurchase);
  
     return (
@@ -25,7 +29,7 @@ const MyPurchase = () => {
                     myPurchase.map(purchase => <DisplayPurchase 
                     key = {purchase._id}
                     purchasedBookData = {purchase}
-                    // handleRemoveUserEvents = {handleRemoveUserEvents}
+                    handleRemoveMyPurchase = {handleRemoveMyPurchase}
                     >
                     </DisplayPurchase> )
                 }
