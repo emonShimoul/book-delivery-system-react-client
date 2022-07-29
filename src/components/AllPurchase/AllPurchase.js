@@ -12,7 +12,7 @@ const AllPurchase = () => {
         .then(res => res.json())
         .then(data => setAllPurchase(data));
     }, []);
-    console.log(allPurchase);
+    
     return (
         <div className="container">
             <div className='mypurchase mt-5'>
