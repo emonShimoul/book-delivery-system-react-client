@@ -48,7 +48,7 @@ const Header = () => {
                             </div>
                             :
                              <div>
-                                 <span className='fw-bold text-light mt-2 ms-2 me-3'>{user.displayName}</span>
+                                 <span className='fw-bold mt-2 ms-2 me-3 text-danger fs-5'>{user.displayName}</span>
                                 <Button variant="warning" onClick={handleLogOut}>Log Out</Button>
                              </div>
                         }
