@@ -49,7 +49,7 @@ const Header = () => {
                             :
                              <div>
                                  <span className='fw-bold text-light mt-2 ms-2 me-3'>{user.displayName}</span>
-                                <Button variant="secondary" onClick={handleLogOut}>Log Out</Button>
+                                <Button variant="warning" onClick={handleLogOut}>Log Out</Button>
                              </div>
                         }
                     </Form>
