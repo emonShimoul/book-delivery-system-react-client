@@ -19,7 +19,7 @@ const Header = () => {
         <div>
             <Navbar className='py-3' bg="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand><Link className='text-decoration-none text-info fw-bold' to="/">Book Delivery System</Link></Navbar.Brand>
+                    <Navbar.Brand><Link className='text-decoration-none text-info fw-bold fs-4' to="/">Book Delivery System</Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                     <Nav
