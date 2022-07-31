@@ -13,6 +13,7 @@ const DisplayPurchase = (props) => {
             <p>{phone}</p>
             <p>{date}</p>
             <p>{name}</p>
+            <p>{email}</p>
             <p><small>Price: {bookprice}</small></p>
             <button className='btn btn-warning me-1 px-3' onClick={() => handleRemoveMyPurchase(purchasedBookData._id)}>Remove</button>
             <button className='btn btn-dark ms-1 px-4'>Edit</button>
